@@ -26,7 +26,10 @@ function draw() {
   } else {
     translate(last_postion[0], last_postion[1]);
   }
-  rect(10, 10, 40, 50);
-  rect(100, 100, 10, 10);
-  fill(0);
+  rect(10, 10, 100, 100);
+  let red = map(last_postion[0], 0, width, 0, 255);
+  let blue = map(last_postion[1], 0, height, 0, 255);
+
+  fill(color(red, 0, blue));
+  noStroke();
 }
